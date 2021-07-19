@@ -15,9 +15,9 @@ defined( 'ABSPATH' ) or die( 'Get out!' );
 function filtrar_titol( $title ) {
 
   if ( is_single() ) {
-    return '' . $title . ' <b><em>[Pau]</em></b>';
+    return $title .'<b><em>[Pau]</em></b>';
   } else {
-    return '' . $title . '';
+    return $title;
   }
 
 }
