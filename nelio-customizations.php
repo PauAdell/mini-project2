@@ -21,7 +21,9 @@ add_filter( 'the_title', 'filtrar_titol' );
 
 function imatge_final_entrada ( $content) {
   if ( is_single() ) {
-    $content .='<img src="/wp-content/uploads/2021/07/gorgeous-winter-snow-wallpaper-44338-45459-hd-wallpapers-150x150.jpg">';
+    $image_url = untrailingslashit( plugin_dir_url(__FILE__) );
+    $image_url .= "/images/gorgeous-winter-snow-wallpaper-44338-45459-hd-wallpapers.jpg";
+    $content .='<img src="'.$image_url.'">';
   }
   return $content;
 }
